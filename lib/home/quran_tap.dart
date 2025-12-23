@@ -9,9 +9,6 @@ class QuranTap extends StatelessWidget {
       children: [
         Center(child: ImageIcon(AssetImage("assets/images/quran_header_icn.png"),size: 200,)),
 
-        Row(
-
-        )
       ],
 
     );
