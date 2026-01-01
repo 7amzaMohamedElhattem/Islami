@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_appp/l10n/app_localizations.dart';
 import 'package:islami_appp/tabs/ahadeth_tap.dart';
 import 'package:islami_appp/tabs/quran_tap.dart';
 import 'package:islami_appp/tabs/radio_tap.dart';
@@ -29,13 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text(
-            "إسلامى",
-            style: GoogleFonts.elMessiri(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
+          title: Text(AppLocalizations.of(context)!.app_name,
+          style: Theme.of(context).textTheme.bodyLarge,),
           centerTitle: true,
         ),
         body: tabs[index],
@@ -43,9 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Color(0xffB7935F),
           type: BottomNavigationBarType.fixed,
           currentIndex: index,
-          iconSize: 35 ,
-          unselectedItemColor: Colors.black,
-          selectedItemColor: Colors.white,
+          iconSize: 30,
           onTap: (value){
             index = value;
             setState(() {
